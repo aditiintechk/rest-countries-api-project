@@ -28,10 +28,12 @@ function App() {
 	))
 
 	return (
-		<>
+		<div className='container'>
 			<Header />
-			<main className='main'>{cardElements}</main>
-		</>
+			<main className='main'>
+				<section className='card-section'>{cardElements}</section>
+			</main>
+		</div>
 	)
 }
 

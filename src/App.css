@@ -1,5 +1,4 @@
 #root {
-	max-width: 400px;
 	margin: 0 auto;
 	font-family: 'Nunito Sans', sans-serif;
 }
@@ -49,14 +48,16 @@ p {
 
 /* CARD */
 
-.main {
-	padding: 2.5em 0;
+.card-section {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: repeat(auto-fill, 350px);
+	gap: 30px;
+	justify-content: center;
+	align-items: stretch;
 }
 
 .card {
-	width: 280px;
+	width: 350px;
 	margin: 0 auto;
 	background-color: #2b3945;
 	border-radius: 5px;
