@@ -13,21 +13,20 @@ function App() {
 	}, [])
 
 	function sortedCards() {
-		let sortedCardsCollection = cardCollection.sort((a, b) =>
+		cardCollection.sort((a, b) =>
 			a.name.common > b.name.common
 				? 1
 				: a.name.common < b.name.common
 				? -1
 				: 0
 		)
-		return sortedCardsCollection
 	}
 
-	console.log(cardCollection.length && sortedCards())
+	sortedCards()
 
 	const cardElements = cardCollection.map((eachCard) => (
 		<Card
-			key={eachCard.ccn3}
+			key={eachCard.alpha3Code}
 			name={eachCard.name.common}
 			population={eachCard.population}
 			region={eachCard.region}
