@@ -5,6 +5,7 @@ import Card from './components/Card.jsx'
 
 function App() {
 	const [cardCollection, setCardCollection] = useState([])
+	const [lightMode, setLightMode] = useState(false)
 
 	useEffect(() => {
 		fetch('https://restcountries.com/v3.1/all')
@@ -24,6 +25,11 @@ function App() {
 
 	sortedCards()
 
+	function toggleMode() {
+		console.log('clicked on dark mode button yuhooo')
+		setLightMode((prevMode) => !prevMode)
+	}
+
 	const cardElements = cardCollection.map((eachCard) => (
 		<Card
 			key={eachCard.alpha3Code}
@@ -32,13 +38,14 @@ function App() {
 			region={eachCard.region}
 			capital={eachCard.capital}
 			flag={eachCard.flags.svg}
+			lightMode={lightMode}
 		/>
 	))
 
 	return (
 		<div className='container'>
-			<Header />
-			<main className='main'>
+			<Header lightMode={lightMode} toggleMode={toggleMode} />
+			<main className={lightMode ? 'main light' : 'main'}>
 				<section className='card-section'>{cardElements}</section>
 			</main>
 		</div>

@@ -1,7 +1,7 @@
 export default function Card(props) {
-	const { name, population, region, capital, flag } = props
+	const { name, population, region, capital, flag, lightMode } = props
 	return (
-		<section className='card'>
+		<section className={lightMode ? 'card light' : 'card'}>
 			<img src={flag} alt={`flag of ${name}`} className='card--img' />
 			<div className='card--details'>
 				<h2 className='card__name'>{name}</h2>
