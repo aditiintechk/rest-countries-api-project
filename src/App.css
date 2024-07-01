@@ -91,3 +91,26 @@ p {
 	font-weight: 200;
 	letter-spacing: 0.5px;
 }
+
+@media (min-width: 720px) {
+	.header {
+		padding: 3em 4em;
+	}
+
+	.header--title {
+		font-size: 1.8rem;
+	}
+
+	.header--mode {
+		gap: 10px;
+	}
+
+	.mode__img {
+		width: 0.9rem;
+	}
+
+	.mode__text {
+		font-size: 1.1rem;
+		font-weight: 400;
+	}
+}

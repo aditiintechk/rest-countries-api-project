@@ -5,16 +5,25 @@ import Card from './components/Card.jsx'
 
 function App() {
 	const [cardCollection, setCardCollection] = useState([])
-	console.log('component rendered')
 
 	useEffect(() => {
-		console.log('effect running...')
 		fetch('https://restcountries.com/v3.1/all')
 			.then((response) => response.json())
 			.then((data) => setCardCollection(data))
 	}, [])
 
-	console.log(cardCollection.length && cardCollection[76].name.common)
+	function sortedCards() {
+		let sortedCardsCollection = cardCollection.sort((a, b) =>
+			a.name.common > b.name.common
+				? 1
+				: a.name.common < b.name.common
+				? -1
+				: 0
+		)
+		return sortedCardsCollection
+	}
+
+	console.log(cardCollection.length && sortedCards())
 
 	const cardElements = cardCollection.map((eachCard) => (
 		<Card
