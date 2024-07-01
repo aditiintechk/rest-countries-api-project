@@ -49,11 +49,18 @@ p {
 
 /* CARD */
 
+.main {
+	padding: 2.5em 0;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
 .card {
 	width: 280px;
+	margin: 0 auto;
 	background-color: #2b3945;
 	border-radius: 5px;
-	margin: 2.5em auto;
+	margin: 1.5em auto;
 }
 
 .card--img {
