@@ -28,7 +28,7 @@ function App() {
 		<Card
 			key={eachCard.alpha3Code}
 			name={eachCard.name.common}
-			population={eachCard.population}
+			population={Intl.NumberFormat('en-US').format(eachCard.population)}
 			region={eachCard.region}
 			capital={eachCard.capital}
 			flag={eachCard.flags.svg}
