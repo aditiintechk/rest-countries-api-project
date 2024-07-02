@@ -87,6 +87,12 @@ header.light {
 	margin: 1.5em auto;
 }
 
+.card:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	box-shadow: 2px 2px 2px #111517;
+}
+
 .card.light {
 	background-color: #fafafa;
 	color: #000;
