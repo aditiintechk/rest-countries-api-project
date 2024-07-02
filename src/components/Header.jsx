@@ -8,8 +8,8 @@ export default function Header(props) {
 						className='mode__img'
 						src={
 							props.lightMode
-								? '../../public/light-mode.svg'
-								: '../../public/dark-mode.svg'
+								? '../assests/light-mode.svg'
+								: '../assests/dark-mode.svg'
 						}
 						alt='white color moon symbol to represent dark mode of the website'
 					/>
