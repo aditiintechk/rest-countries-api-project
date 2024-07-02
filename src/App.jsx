@@ -59,7 +59,7 @@ function App() {
 	))
 
 	return (
-		<div className='container'>
+		<div className={lightMode ? 'container light' : 'container'}>
 			<Header lightMode={lightMode} toggleMode={toggleMode} />
 
 			<main
