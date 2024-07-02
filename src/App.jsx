@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header.jsx'
 import Card from './components/Card.jsx'
+import Detail from './components/Detail.jsx'
 
 function App() {
 	const [cardCollection, setCardCollection] = useState([])
@@ -24,6 +25,7 @@ function App() {
 	}
 
 	sortedCards()
+	// console.log(cardCollection.length && cardCollection[0])
 
 	function toggleMode() {
 		console.log('clicked on dark mode button yuhooo')
@@ -48,6 +50,27 @@ function App() {
 			<main className={lightMode ? 'main light' : 'main'}>
 				<section className='card-section'>{cardElements}</section>
 			</main>
+
+			{/* <div className={lightMode ? 'main light' : 'main'}>
+				<section className='back'>
+					<button className='back-btn'>Back</button>
+				</section>
+				{cardCollection.length && (
+					<Detail
+						flag={cardCollection[0].flags.svg}
+						name={cardCollection[0].name.common}
+						nativeName={cardCollection[0].name.nativeName}
+						population={cardCollection[0].population}
+						region={cardCollection[0].region}
+						subRegion={cardCollection[0].subregion}
+						capital={cardCollection[0].capital}
+						topLevelDomain={cardCollection[0].tld}
+						currencies={cardCollection[0].currencies}
+						languages={cardCollection[0].languages}
+						// borderCoutries={cardCollection[0].borders}
+					/>
+				)}
+			</div> */}
 		</div>
 	)
 }
