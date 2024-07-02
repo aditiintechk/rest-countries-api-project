@@ -166,6 +166,10 @@ header.light {
 	opacity: 0.8;
 }
 
+.hidden {
+	display: none;
+}
+
 @media (min-width: 720px) {
 	.header {
 		padding: 3em 4em;

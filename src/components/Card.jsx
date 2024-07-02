@@ -1,7 +1,18 @@
 export default function Card(props) {
-	const { name, population, region, capital, flag, lightMode } = props
+	const {
+		name,
+		population,
+		region,
+		capital,
+		flag,
+		lightMode,
+		handleCardClick,
+	} = props
 	return (
-		<section className={lightMode ? 'card light' : 'card'}>
+		<section
+			className={lightMode ? 'card light' : 'card'}
+			onClick={() => handleCardClick(name)}
+		>
 			<img src={flag} alt={`flag of ${name}`} className='card--img' />
 			<div className='card--details'>
 				<h2 className='card__name'>{name}</h2>
