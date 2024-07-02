@@ -126,6 +126,46 @@ header.light {
 	letter-spacing: 0.5px;
 }
 
+/* DETAIL CONTENT */
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2.5rem;
+	padding: 2.5em 1em;
+}
+
+.content--detail {
+	width: 95%;
+}
+
+.content--img {
+	width: 100%;
+}
+
+.content--specifics {
+	margin-top: 1.5em;
+	line-height: 2.2;
+}
+
+.back-btn {
+	background-color: #2b3945;
+	border: none;
+	outline: none;
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.9em 2em;
+	margin: 2.5em;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.back-btn:hover {
+	opacity: 0.8;
+}
+
 @media (min-width: 720px) {
 	.header {
 		padding: 3em 4em;
@@ -146,5 +186,19 @@ header.light {
 	.mode__text {
 		font-size: 1.1rem;
 		font-weight: 400;
+	}
+
+	.content {
+		flex-direction: row;
+		padding: 2em;
+		gap: 4rem;
+	}
+
+	.content--detail {
+		width: 45%;
+	}
+
+	.content--specifics .specifics {
+		font-size: 1.2rem;
 	}
 }

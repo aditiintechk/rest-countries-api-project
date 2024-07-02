@@ -25,10 +25,8 @@ function App() {
 	}
 
 	sortedCards()
-	// console.log(cardCollection.length && cardCollection[0])
 
 	function toggleMode() {
-		console.log('clicked on dark mode button yuhooo')
 		setLightMode((prevMode) => !prevMode)
 	}
 
@@ -53,7 +51,7 @@ function App() {
 
 			{/* <div className={lightMode ? 'main light' : 'main'}>
 				<section className='back'>
-					<button className='back-btn'>Back</button>
+					<button className='back-btn'>⬅ Back</button>
 				</section>
 				{cardCollection.length && (
 					<Detail
@@ -67,7 +65,6 @@ function App() {
 						topLevelDomain={cardCollection[0].tld}
 						currencies={cardCollection[0].currencies}
 						languages={cardCollection[0].languages}
-						// borderCoutries={cardCollection[0].borders}
 					/>
 				)}
 			</div> */}

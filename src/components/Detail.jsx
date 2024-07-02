@@ -12,8 +12,6 @@ export default function Detail(props) {
 		languages,
 	} = props
 
-	console.log(languages)
-
 	function renderNativeName() {
 		let nativeNameArr = []
 		const nativeNameKeys = Object.keys(nativeName)
@@ -49,10 +47,10 @@ export default function Detail(props) {
 
 	return (
 		<section className='content'>
-			<div>
+			<div className='content--detail'>
 				<img className='content--img' src={flag} alt='country flag' />
 			</div>
-			<div>
+			<div className='content--detail'>
 				<h2 className='content--name'>{name}</h2>
 				<div className='content--specifics'>
 					<h3 className='specifics'>
@@ -80,14 +78,6 @@ export default function Detail(props) {
 						Languages: <span>{renderLanguages().join(', ')}</span>
 					</h3>
 				</div>
-				{/* <div className='border-countries'>
-					<h3>
-						Border Countries:
-						<span>{borderCountry1}</span>
-						<span>{borderCountry2}</span>
-						<span>{borderCountry3}</span>
-					</h3>
-				</div> */}
 			</div>
 		</section>
 	)
